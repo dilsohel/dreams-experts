@@ -110,11 +110,12 @@
         
         /* Home Section */
         #home {
-            height: 160vh;
-            background: url('https://imgur.com/JVrpSd6.jpg');
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 20, 40, 0.8)),
+                        url('https://imgur.com/JVrpSd6.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,8 +125,9 @@
         }
         
         .hero-content {
-            max-width: 800px;
-            padding: 2rem;
+            max-width: 90%;
+            width: 100%;
+            padding: 2rem 1rem;
             animation: fadeInUp 1s ease;
             position: relative;
             z-index: 2;
@@ -281,7 +283,7 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -334,7 +336,7 @@
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -575,6 +577,16 @@
         }
         
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+        }
+        
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
@@ -587,6 +599,7 @@
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                 padding: 2rem 0;
+                gap: 1rem;
             }
             
             .nav-menu.active {
@@ -611,10 +624,17 @@
             
             .hero-content h1 {
                 font-size: 2.5rem;
+                line-height: 1.2;
             }
             
             .hero-content p {
                 font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .btn-primary {
+                padding: 12px 30px;
+                font-size: 1rem;
             }
             
             .about-content,
@@ -626,16 +646,31 @@
             .services-grid,
             .portfolio-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .section-title h2 {
                 font-size: 2rem;
+            }
+            
+            .service-card,
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .contact-info {
+                padding: 1.5rem;
             }
         }
         
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 2rem;
+                line-height: 1.1;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
             }
             
             .container {
@@ -644,6 +679,39 @@
             
             .nav-container {
                 padding: 1rem;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-card,
+            .contact-form,
+            .contact-info {
+                padding: 1rem;
+            }
+            
+            .btn-primary {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-item {
+                padding: 0.8rem;
+            }
+            
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -1021,6 +1089,3 @@
     </script>
 </body>
 </html>
-
-
-
