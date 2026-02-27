@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -49,16 +49,36 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
         }
         
-        .logo img {
-            height: 50px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo img:hover {
+        .logo:hover {
             transform: scale(1.05);
+        }
+        
+        .logo .dreams {
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .logo .experts {
+            color: #0066cc;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 102, 204, 0.5),
+                         0 0 20px rgba(0, 102, 204, 0.3),
+                         0 0 30px rgba(0, 102, 204, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover .experts {
+            color: #0080ff;
+            text-shadow: 0 0 15px rgba(0, 128, 255, 0.6),
+                         0 0 25px rgba(0, 128, 255, 0.4),
+                         0 0 35px rgba(0, 128, 255, 0.3);
         }
         
         .nav-menu {
@@ -680,8 +700,8 @@
                 padding: 1rem;
             }
             
-            .logo img {
-                height: 40px;
+            .logo {
+                font-size: 1.3rem;
             }
             
             .section-title h2 {
@@ -720,7 +740,8 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-            <img src="https://imgur.com/SXtRaCw.png" alt="Dreams Experts Logo">
+            <span class="dreams">Dreams</span>
+            <span class="experts">Experts</span>
         </a>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -1088,7 +1109,6 @@
     </script>
 </body>
 </html>
-
 
 
 
